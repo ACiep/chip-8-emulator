@@ -6,6 +6,8 @@ use chip8::Chip8;
 use rom::Rom;
 use std::fs::File;
 
+pub const PROGRAM_START_INDEX: usize = 512;
+
 fn main() {
     let filename = "resources/PONG";
     let file = File::open(filename).unwrap();
