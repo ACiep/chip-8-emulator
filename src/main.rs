@@ -1,6 +1,10 @@
+extern crate rand;
+
 mod chip8;
 pub mod memory;
+pub mod opcode;
 pub mod rom;
+pub mod screen;
 
 use chip8::Chip8;
 use rom::Rom;
