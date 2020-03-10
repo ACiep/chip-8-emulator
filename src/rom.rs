@@ -1,7 +1,6 @@
 use std::fs::File;
 use std::io::prelude::*;
 
-#[derive(Debug)]
 pub struct Rom {
     pub data: Vec<u8>,
 }

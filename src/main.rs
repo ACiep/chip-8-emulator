@@ -1,4 +1,5 @@
 mod chip8;
+pub mod memory;
 pub mod rom;
 
 use chip8::Chip8;
@@ -9,7 +10,17 @@ fn main() {
     let filename = "resources/PONG";
     let file = File::open(filename).unwrap();
     let rom = Rom::from(file);
-    let chip8 = Chip8::new(rom);
+    let mut chip8 = Chip8::new(rom);
 
-    dbg!(chip8);
+    // loop {
+    chip8.cycle();
+
+    //     if chip8.should_draw() {
+    //         draw()
+    //     }
+
+    //     chip8.get_key();
+    // }
+
+    // dbg!(chip8);
 }
